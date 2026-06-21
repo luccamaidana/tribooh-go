@@ -1,0 +1,217 @@
+/* ==========================================================================
+   Tribooh Go! — Ruleta de premios
+   ========================================================================== */
+
+:root {
+  --azul-fondo: #3173FF;
+  --crema: #FFF7DD;
+  --rosa: #E83D8D;
+  --transicion-suave: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: var(--azul-fondo);
+  font-family: 'Fredoka One', cursive, sans-serif;
+  color: var(--crema);
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--crema);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+/* ==========================================================================
+   Layout general
+   ========================================================================== */
+
+.app {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: clamp(16px, 5vh, 48px) 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pantalla {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(10px, 2.5vh, 22px);
+}
+
+.pantalla--activa {
+  display: flex;
+}
+
+.logo {
+  width: clamp(140px, 38vw, 220px);
+}
+
+/* ==========================================================================
+   Pantalla 1 — Ruleta
+   ========================================================================== */
+
+.flecha {
+  width: clamp(28px, 7vw, 42px);
+  margin-bottom: -6px;
+}
+
+.ruleta-wrap {
+  width: clamp(240px, 78vw, 380px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ruleta {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  will-change: transform;
+  /* La rotación se controla desde JS, en grados acumulados */
+  transform: rotate(0deg);
+}
+
+.ruleta.girando {
+  transition: transform 4.2s var(--transicion-suave);
+}
+
+.btn-girar {
+  width: clamp(150px, 40vw, 200px);
+  margin-top: clamp(6px, 1.5vh, 16px);
+  transition: transform 0.15s ease;
+}
+
+.btn-girar:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.btn-girar:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.btn-girar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Pantalla 2 — Premio
+   ========================================================================== */
+
+.ganaste {
+  width: clamp(200px, 55vw, 320px);
+  margin-top: clamp(8px, 2vh, 20px);
+}
+
+.premio-nombre {
+  width: clamp(220px, 60vw, 340px);
+}
+
+.flecha--arriba {
+  transform: rotate(180deg);
+  margin: 0;
+}
+
+.btn-descargar {
+  width: clamp(260px, 80vw, 380px);
+  transition: transform 0.15s ease;
+}
+
+.btn-descargar:hover {
+  transform: scale(1.04);
+}
+
+.btn-descargar:active {
+  transform: scale(0.96);
+}
+
+.link-otra-vez {
+  margin-top: clamp(10px, 3vh, 26px);
+  color: var(--crema);
+  opacity: 0.75;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.link-otra-vez:hover {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Animación de entrada de la pantalla de premio
+   ========================================================================== */
+
+.pantalla--activa {
+  animation: aparecer 0.5s var(--transicion-suave);
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ruleta.girando {
+    transition-duration: 0.6s;
+  }
+  .pantalla--activa {
+    animation: none;
+  }
+}
+
+/* Pantallas muy bajas (celulares chicos en horizontal) */
+@media (max-height: 560px) {
+  .app {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .logo {
+    width: clamp(110px, 26vw, 160px);
+  }
+}

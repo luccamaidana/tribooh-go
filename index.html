@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tribooh Go! - Ruleta de premios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="app">
+
+    <!-- ===================== PANTALLA 1: RULETA ===================== -->
+    <section id="pantalla-ruleta" class="pantalla pantalla--activa">
+
+      <img class="logo" src="assets/logo.png" alt="Tribooh Go!">
+
+      <img class="flecha" src="assets/flecha.png" alt="">
+
+      <div class="ruleta-wrap">
+        <img id="ruleta" class="ruleta" src="assets/ruleta.png" alt="Ruleta de premios">
+      </div>
+
+      <button id="btn-girar" class="btn-girar" type="button">
+        <img src="assets/boton-girar.png" alt="¡Girar!">
+      </button>
+
+    </section>
+
+    <!-- ===================== PANTALLA 2: PREMIO ===================== -->
+    <section id="pantalla-premio" class="pantalla">
+
+      <img class="logo" src="assets/logo.png" alt="Tribooh Go!">
+
+      <img class="ganaste" src="assets/ganaste.png" alt="¡Ganaste!">
+
+      <img id="premio-nombre" class="premio-nombre" src="" alt="Tu premio">
+
+      <img class="flecha flecha--arriba" src="assets/flecha.png" alt="">
+
+      <button id="btn-descargar" class="btn-descargar" type="button">
+        <img src="assets/click-aqui.png" alt="Click aquí para obtener tu premio">
+      </button>
+
+      <button id="btn-otra-vez" class="link-otra-vez" type="button">Girar de nuevo</button>
+
+    </section>
+
+  </main>
+
+  <a id="link-descarga-oculto" href="" download style="display:none;"></a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
