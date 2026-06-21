@@ -144,6 +144,15 @@ a:focus-visible {
 
 .premio-nombre {
   width: clamp(220px, 60vw, 340px);
+  transition: transform 0.15s ease;
+}
+
+.premio-nombre:hover {
+  transform: scale(1.04);
+}
+
+.premio-nombre:active {
+  transform: scale(0.96);
 }
 
 .flecha--arriba {
@@ -154,14 +163,6 @@ a:focus-visible {
 .btn-descargar {
   width: clamp(260px, 80vw, 380px);
   transition: transform 0.15s ease;
-}
-
-.btn-descargar:hover {
-  transform: scale(1.04);
-}
-
-.btn-descargar:active {
-  transform: scale(0.96);
 }
 
 .link-otra-vez {

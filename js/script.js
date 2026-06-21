@@ -75,7 +75,7 @@
   const pantallaPremio = document.getElementById("pantalla-premio");
   const ruleta = document.getElementById("ruleta");
   const btnGirar = document.getElementById("btn-girar");
-  const btnDescargar = document.getElementById("btn-descargar");
+  const btnDescargar = document.getElementById("premio-nombre");
   const btnOtraVez = document.getElementById("btn-otra-vez");
   const imgPremioNombre = document.getElementById("premio-nombre");
   const linkDescargaOculto = document.getElementById("link-descarga-oculto");
