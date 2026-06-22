@@ -1,11 +1,11 @@
 # Tribooh Go! — Ruleta de premios
+[triboohgo.com](https://luccamaidana.github.io/tribooh-go/)
 
----
 
 ## 🚀 **Descripción**
-Trabajo de Marca y Packaging **Diseño Gráfico UNR**
+Trabajo de Marca y Packaging **Diseño Gráfico UNR**. Cátedra Marull.
 
----
+
 
 ## 👩‍💻 **Equipo de Desarrollo**
 | Nombre              | Rol                        |
@@ -16,7 +16,7 @@ Trabajo de Marca y Packaging **Diseño Gráfico UNR**
 | Catalina Marull     | Diseñadora Gráfica         |
 | Lucca Maidana       | Programador                |
 
----
+
 
 ## 📅 **Fecha de Entrega**
 🗓️ **Junio de 2026**
