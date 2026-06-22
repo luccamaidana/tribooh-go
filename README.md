@@ -13,7 +13,6 @@ Trabajo de Marca y Packaging **Diseño Gráfico UNR**. Cátedra Marull.
 | Sofía Ferrari       | Diseñadora Gráfica         |
 | Sol Linari          | Diseñadora Gráfica         |
 | Francisca Lepori    | Diseñadora Gráfica         |
-| Catalina Marull     | Diseñadora Gráfica         |
 | Lucca Maidana       | Programador                |
 
 
